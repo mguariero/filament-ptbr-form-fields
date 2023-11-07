@@ -34,6 +34,7 @@ class Money extends TextInput
                     money = money.replace(/(\d)(\d{3}),/g, "$1.$2,");
                 
                     $el.value = money;
+                    $el.dispatchEvent(new Event(\'input\'));
                 }',
             ])
             ->dehydrateMask()
